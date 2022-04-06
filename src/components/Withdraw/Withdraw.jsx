@@ -42,9 +42,14 @@ function Withdraw() {
                       }}
                       type="number"
                       placeholder="$"
+                      data-testid="withdrawal-input"
                     />
                   </Form.Group>
-                  <Button onClick={() => checkTransaction()} variant="primary">
+                  <Button
+                    onClick={() => checkTransaction()}
+                    variant="primary"
+                    data-testid="withdrawal-button"
+                  >
                     Withdraw
                   </Button>
                 </Card.Text>

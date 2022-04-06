@@ -23,10 +23,10 @@ function Header() {
           <NavLink to="/transactions" className="nav-link">
             Transactions
           </NavLink> */}
-          <NavLink to="/withdraw" className="nav-link">
+          <NavLink to="/withdraw" className="nav-link" data-testid="withdrawal-link">
             Withdraw
           </NavLink>
-          <NavLink to="/deposit" className="nav-link">
+          <NavLink to="/deposit" className="nav-link" data-testid="deposit-link">
             Deposit
           </NavLink>
           <Nav.Link href="https://github.com/CaptainPoldark/mv_frontend_challenge_1" className="nav-link">

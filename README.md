@@ -29,6 +29,22 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.
 
+## Testing
+
+Two scripts are provided for testing the functionality of the deposit and withdrawal forms
+
+to run both tests type
+
+### `npm test`
+
+in your terminal
+
+Two test suites and four tests should pass successfully.
+
+The tests are
+Deposit.test.js
+Withrawal.test.js
+
 ## Features
 
 This application allows depositing and withdrawing funds into a bank account. 

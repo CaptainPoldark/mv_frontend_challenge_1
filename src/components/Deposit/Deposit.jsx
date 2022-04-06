@@ -36,18 +36,20 @@ function Deposit() {
                         setDepositAmount(amount);
                       }}
                       type="number"
+                      data-testid="deposit-input"
                       placeholder="$"
                     />
                   </Form.Group>
                   <Button
                     onClick={() => checkTransaction()}
                     variant="primary"
+                    data-testid="deposit-button"
                   >
                     Deposit
                   </Button>
                 </Card.Text>
               </Card.Body>
-              <Card.Footer className="text-muted">
+              <Card.Footer className="text-muted" data-testid="balance" label="account balance">
               {error ? error : `Account Total: $${counter}`}
               </Card.Footer>
             </Card>
