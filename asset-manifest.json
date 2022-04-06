@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/captainpoldark.github.io/mv_frontend_challenge_1/static/css/main.68174ed3.css",
-    "main.js": "/captainpoldark.github.io/mv_frontend_challenge_1/static/js/main.2334ee21.js",
-    "index.html": "/captainpoldark.github.io/mv_frontend_challenge_1/index.html",
-    "main.68174ed3.css.map": "/captainpoldark.github.io/mv_frontend_challenge_1/static/css/main.68174ed3.css.map",
-    "main.2334ee21.js.map": "/captainpoldark.github.io/mv_frontend_challenge_1/static/js/main.2334ee21.js.map"
+    "main.css": "/mv_frontend_challenge_1/static/css/main.68174ed3.css",
+    "main.js": "/mv_frontend_challenge_1/static/js/main.2334ee21.js",
+    "index.html": "/mv_frontend_challenge_1/index.html",
+    "main.68174ed3.css.map": "/mv_frontend_challenge_1/static/css/main.68174ed3.css.map",
+    "main.2334ee21.js.map": "/mv_frontend_challenge_1/static/js/main.2334ee21.js.map"
   },
   "entrypoints": [
     "static/css/main.68174ed3.css",
