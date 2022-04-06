@@ -14,6 +14,7 @@ function Deposit() {
       setError("Only positive numbers are allowed");
       return;
     } else {
+      setError();
       dispatch(deposit(depositAmount));
     }
   };

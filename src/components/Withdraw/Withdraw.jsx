@@ -14,6 +14,7 @@ function Withdraw() {
       setError("You don't have enough funds for this transaction");
       return;
     } else {
+      setError();
       dispatch(withdrawal(withdrawAmount));
     }
   };
