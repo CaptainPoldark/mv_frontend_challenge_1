@@ -13,6 +13,10 @@ function Withdraw() {
     if (withdrawAmount > counter) {
       setError("You don't have enough funds for this transaction");
       return;
+    }
+    if (withdrawAmount < 0) {
+      setError("Only positive numbers are allowed");
+      return;
     } else {
       setError();
       dispatch(withdrawal(withdrawAmount));
