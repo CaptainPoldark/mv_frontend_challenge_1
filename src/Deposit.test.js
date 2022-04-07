@@ -28,10 +28,13 @@ test("test deposit form", () => {
   );
   const depositLink = screen.getByTestId(/deposit-link/);
   fireEvent.click(depositLink, { button: 0 });
-  const dollarSign = screen.getByTestId(/deposit-input/);
-  fireEvent.change(dollarSign, { target: { value: 5 } });
-  const depositButton = screen.getByTestId(/deposit-button/);
-  fireEvent.click(depositButton, { button: 0 });
+
+  const transactionInput = screen.getByTestId(/transaction-input/);
+  const transactionButton = screen.getByTestId(/transaction-button/);
+  
+  fireEvent.change(transactionInput, { target: { value: 5 } });
+  fireEvent.click(transactionButton, { button: 0 });
   expect(screen.getByText("Account Total: $5")).toBeInTheDocument();
+
   console.log("Deposit form test passed");
 });

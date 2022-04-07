@@ -27,18 +27,22 @@ test("test withdrawal form", () => {
     </Provider>
   );
   const depositLink = screen.getByTestId(/deposit-link/);
-  fireEvent.click(depositLink, { button: 0 });
-  const depositInput = screen.getByTestId(/deposit-input/);
-  fireEvent.change(depositInput, { target: { value: 10 } });
-  const depositButton = screen.getByTestId(/deposit-button/);
-  fireEvent.click(depositButton, { button: 0 });
-  expect(screen.getByText("Account Total: $10")).toBeInTheDocument();
   const withdrawalLink = screen.getByTestId(/withdrawal-link/);
+
+  fireEvent.click(depositLink, { button: 0 });
+  const transactionInput0 = screen.getByTestId(/transaction-input/);
+  const transactionButton0 = screen.getByTestId(/transaction-button/);
+  
+  fireEvent.change(transactionInput0, { target: { value: 10 } });
+  fireEvent.click(transactionButton0, { button: 0 });
+  expect(screen.getByText("Account Total: $10")).toBeInTheDocument();
+
   fireEvent.click(withdrawalLink, { button: 0 });
-  const withdrawalInput = screen.getByTestId(/withdrawal-input/);
-  fireEvent.change(withdrawalInput, { target: { value: 2 } });
-  const withdrawalButton = screen.getByTestId(/withdrawal-button/);
-  fireEvent.click(withdrawalButton, { button: 0 });
+  const transactionInput1 = screen.getByTestId(/transaction-input/);
+  const transactionButton1 = screen.getByTestId(/transaction-button/);
+  fireEvent.change(transactionInput1, { target: { value: 2 } });
+  fireEvent.click(transactionButton1, { button: 0 });
   expect(screen.getByText("Account Total: $8")).toBeInTheDocument();
+
   console.log("Withdrawal form test passed");
 });
