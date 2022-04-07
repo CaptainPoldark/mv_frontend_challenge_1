@@ -29,7 +29,7 @@ function Deposit() {
                 <Card.Title>Enter your deposit amount</Card.Title>
                 <Card.Text>
                   <Form.Group className="mb-3" controlId="depositForm">
-                    <Form.Label></Form.Label>
+
                     <Form.Control
                       onChange={(e) => {
                         let amount = Number(e.target.value);
