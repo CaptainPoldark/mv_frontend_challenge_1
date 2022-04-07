@@ -4,11 +4,25 @@ import { useSelector, useDispatch } from "react-redux";
 import { deposit, withdrawal } from "../../actions";
 
 function BankCard({ transactionType }) {
+
+  //Get transaction total from redux state and set dispatch
   const counter = useSelector((state) => state.transactionTotal);
   const dispatch = useDispatch();
+
+  //Create react state for the transaction amount entered in the form
   const [transactionAmount, setTransactionAmount] = useState();
+
+  //Create react state for the error message shown in the card footer
   const [error, setError] = useState();
 
+  //This function performs validation checks on the user input
+  //If the transactionType is a deposit, this function checks that the input is a positive number.
+  //If the deposit input is not positive an error message is set to indicate so.
+  //If the transactionType is a withdrawal the function checks that the counter amount is greater than the withdrawal amount.
+  //If the withdrawal amount is less than the current counter, the transactionTotal in redux state, the account balance, an error message is set
+  //If the withdrawal amount is a negative number an error message is set
+  //If all checks pass, then the transactionAmount input is sent to the appropriate redux dispatcher to be added or subtracted from state.
+  //A switch case is used based on the transactionType (Deposit, Withdrawal) to reduce the number of if statements.
   const checkTransaction = () => {
     switch (transactionType) {
       case "Deposit":
